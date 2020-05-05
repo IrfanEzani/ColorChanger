@@ -25,6 +25,7 @@ body {
 
 .text {
   background: black;
+  border: 2px solid white;
   color: white;
   height: auto;
   width: 100vw;
@@ -113,7 +114,7 @@ line-height: 20px;
 }
 
 
-.copy .copybtn {
+.copy #copybtn {
   position: relative;
   padding: 10px;
   font-size: 1rem;
@@ -136,7 +137,7 @@ line-height: 20px;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.copybtn:hover {
+#copybtn:hover {
   cursor: pointer;
   color: rgb(160, 252, 214);
   border-color: inherit;
@@ -147,3 +148,16 @@ line-height: 20px;
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
 }
+
+.done {
+  position: absolute;
+  left: 0; top: 0; right: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  color: rgb(160, 252, 214);
+  transition: all .500s;
+}
+.copied .done {
+  opacity: 1;
+  transform: translateY(-25px);
