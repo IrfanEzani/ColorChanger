@@ -114,6 +114,7 @@ line-height: 20px;
 
 
 .copy .copybtn {
+  position: relative;
   padding: 10px;
   font-size: 1rem;
   text-transform: uppercase;

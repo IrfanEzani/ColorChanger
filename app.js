@@ -19,8 +19,10 @@ function random() {
 }
 
 function copy() {
+  const copybtn = document.getElementsByClassName('copybtn')
 demo.select();
 demo.setSelectionRange(0, 99999);
  document.execCommand("copy");
  alert("Copied to clipboard");
+ copybtn.innerText = "copied";
 }
