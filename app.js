@@ -1,5 +1,5 @@
 const container = document.getElementById('main')
-const demo = document.getElementById('demo')
+const demo = document.getElementById('demo');
 
 function change() {
   const col1 = random();
@@ -11,9 +11,16 @@ function change() {
   const colorString = `rgb(${col1}, ${col2}, ${col3})`
   const otherColorString = `rgb(${col4}, ${col5}, ${col6})`
   container.style.background = "linear-gradient(" + colorString + ", " + otherColorString +")";
-  demo.innerText = "linear-gradient(" + colorString + ", " + otherColorString +");";
+  demo.value = "linear-gradient(" + colorString + ", " + otherColorString +");";
 }
 
 function random() {
   return Math.floor(Math.random() * 256);
+}
+
+function copy() {
+demo.select();
+demo.setSelectionRange(0, 99999);
+ document.execCommand("copy");
+ alert("Copied to clipboard");
 }
